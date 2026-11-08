@@ -5,21 +5,21 @@
 
 The AI-Powered KPI Interpreter is a Python-based data analytics application that transforms business data into meaningful insights using data analysis, interactive visualizations, and Generative AI.
 
-The application allows users to upload business datasets, analyze key performance indicators (KPIs), explore business trends, and generate AI-powered business reports with actionable recommendations.
+Users can upload business datasets, calculate key performance indicators (KPIs), explore business trends, and generate AI-powered reports with recommendations.
 
-It combines traditional data analytics with Google's Gemini AI to make business performance analysis easier to understand.
+The project combines traditional data analytics with Google's Gemini AI to make business performance analysis easier to understand.
 
 ## Key Features
 
-- **Dataset Upload:** Supports CSV, XLS, and XLSX business datasets.
+- **Dataset Upload:** Supports CSV, XLS, and XLSX files.
 - **Data Validation:** Checks required columns, missing values, and data types.
-- **Interactive Filters:** Filter business data by category, region, and order date.
+- **Interactive Filters:** Filter data by category, region, and order date.
 - **KPI Calculation:** Calculates total sales, total profit, total orders, quantity sold, average discount, and profit margin.
 - **Category Analysis:** Compares sales and profitability across categories and subcategories.
 - **Trend Analysis:** Examines monthly sales and profit trends.
-- **Data Visualization:** Displays business performance through interactive charts.
-- **AI-Powered Insights:** Uses Google Gemini to interpret filtered business data and generate recommendations.
-- **Report Generation:** Generates downloadable Markdown and PDF business reports.
+- **Data Visualization:** Presents business performance through charts.
+- **AI-Powered Insights:** Uses Google Gemini to interpret filtered business metrics and generate recommendations.
+- **Report Generation:** Generates downloadable Markdown and PDF reports.
 - **KPI Verification:** Independently verifies dashboard calculations using Python.
 
 ## Technology Stack
@@ -33,7 +33,7 @@ It combines traditional data analytics with Google's Gemini AI to make business 
 | Streamlit | Interactive dashboard |
 | Google Gemini API | Generative AI insights |
 | ReportLab | PDF report generation |
-| python-dotenv | Secure environment variable management |
+| python-dotenv | Environment variable management |
 | Git and GitHub | Version control |
 
 ## Project Workflow
@@ -62,9 +62,15 @@ The application calculates:
 
 ## Dataset
 
-This project uses the Tableau Sample Superstore dataset for demonstration and analysis.
+This project uses the **Tableau Sample Superstore** dataset for demonstration and analysis.
 
-The dataset contains 10,194 records and 21 columns, including order details, customer information, product categories, sales, quantity, discount, and profit.
+- Records: 10,194
+- Columns: 21
+- Data includes order details, customer information, product categories, sales, quantity, discount, and profit.
+
+Dataset source: [Tableau Sample Superstore](https://public.tableau.com/app/sample-data/sample_-_superstore.xls)
+
+This is a sample dataset, not real company transaction data.
 
 ## Project Structure
 
@@ -88,14 +94,16 @@ AI_Powered_KPI_Interpreter/
 │   ├── test_gemini.py
 │   ├── generate_ai_insights.py
 │   ├── generate_pdf_report.py
+│   ├── test_libraries.py
 │   └── verify_dashboard_kpis.py
 │
 ├── reports/
-│   ├── monthly_sales_trend.png
-│   ├── monthly_profit_trend.png
-│   ├── monthly_kpi_report.csv
+│   ├── AI_Business_Performance_Report.pdf
 │   ├── ai_business_performance_report.md
-│   └── latest_ai_generated_report.md
+│   ├── latest_ai_generated_report.md
+│   ├── monthly_kpi_report.csv
+│   ├── monthly_sales_trend.png
+│   └── monthly_profit_trend.png
 │
 └── notebooks/
 ```
@@ -105,8 +113,8 @@ AI_Powered_KPI_Interpreter/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd AI_Powered_KPI_Interpreter
+git clone https://github.com/kavyasreekaparthi-hub/AI-Powered-KPI-Interpreter.git
+cd AI-Powered-KPI-Interpreter
 ```
 
 ### 2. Create a virtual environment
@@ -117,7 +125,7 @@ python -m venv .venv
 
 ### 3. Activate the virtual environment
 
-Windows PowerShell:
+For Windows PowerShell:
 
 ```powershell
 .venv\Scripts\Activate.ps1
@@ -137,7 +145,7 @@ Create a `.env` file in the project root directory:
 GEMINI_API_KEY=your_gemini_api_key
 ```
 
-Obtain your API key through Google AI Studio.
+Obtain an API key through [Google AI Studio](https://aistudio.google.com/).
 
 **Important:** Never upload your `.env` file or expose your API key publicly.
 
@@ -153,14 +161,14 @@ Open the local URL displayed in your terminal.
 
 The project was tested using category-based filters.
 
-For the Technology category, the analysis produced:
+**Technology Category**
 
 - Total Sales: $839,893.28
 - Total Profit: $146,543.38
 - Total Orders: 1,560
 - Profit Margin: 17.45%
 
-For the Office Supplies category:
+**Office Supplies Category**
 
 - Total Sales: $731,893.31
 - Total Profit: $126,023.44
@@ -179,20 +187,20 @@ Google Gemini analyzes calculated business metrics and generates:
 - Identification of loss-making areas
 - Actionable business recommendations
 
-The AI analysis uses calculated results from the selected filters. Recommendations are grounded in the supplied data, and unsupported causes are not treated as confirmed facts.
+The AI analysis uses calculated results from the selected filters. Recommendations are based on the supplied data; potential causes are not treated as confirmed facts without supporting evidence.
 
 ## Future Enhancements
 
 - PDF business report data extraction.
 - Automated anomaly detection.
 - Advanced chart and visual analysis.
-- Additional business datasets and KPI definitions.
+- Support for additional business datasets and KPI definitions.
 - Improved AI-generated explanations and recommendations.
 
-## Author
-
-Developed as a hands-on portfolio project to demonstrate skills in Python, data analytics, business intelligence, dashboard development, and Generative AI.
+## Project Information
 
 **Project:** AI-Powered KPI Interpreter
 
 **Domain:** Data Analytics and Generative AI
+
+**Purpose:** Hands-on portfolio project demonstrating Python, data analytics, dashboard development, business intelligence, and Generative AI integration.
